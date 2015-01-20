@@ -1,6 +1,6 @@
 ## node-kit is also known as nk
 
-nk is to help newbies learn to craft a small but functional web app using :
+nk is to help newbies learn to craft a small web app but with a complete set of functions by using :
 
 - Express.js
 - Jade template engine
