@@ -10,7 +10,6 @@ var paths = {
 };
 
 gulp.task('server', function () {
-  // Start the server at the beginning of the task
   return server.run({
     file: 'app.js'
   });
