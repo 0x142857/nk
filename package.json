@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.11.0",
-    "gulp": "^3.8.10",
+    "gulp": "^3.8.11",
     "gulp-express": "^0.1.4",
     "jade": "^1.9.1"
   },
