@@ -15,7 +15,7 @@
   "devDependencies": {
     "gulp-stylus": "^2.0.0",
     "gulp": "^3.8.11",
-    "gulp-express": "^0.1.4",
+    "gulp-express": "^0.1.4"
   },
   "repository": {
     "type": "git",
