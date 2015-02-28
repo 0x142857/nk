@@ -1,7 +1,9 @@
 var gulp = require('gulp'),
     server = require('gulp-express'),
+    livereload = require('gulp-livereload'),
     stylus = require('gulp-stylus');
 
+livereload({ start: true })
 
 var paths = {
   css: ['./public/css/*.css'],
@@ -20,15 +22,17 @@ gulp.task('styl', function () {
     .pipe(stylus({
       compress: true
     }))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(livereload());
 });
 
 gulp.task('css', function () {
-  return gulp.src(paths.css);
+  return gulp.src(paths.css)
+        .pipe(livereload());
 });
 
 gulp.task('watch', function() {
-
+  livereload.listen();
   gulp.watch(paths.styl, ['styl']);
   gulp.watch(paths.css, ['css']);
   gulp.watch(['app.js'], [server.run]);
