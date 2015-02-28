@@ -7,7 +7,8 @@ livereload({ start: true })
 
 var paths = {
   css: ['./public/css/*.css'],
-  styl: ['./src/styl/*.styl']
+  styl: ['./src/styl/*.styl'],
+  jade: ['./template/*.jade']
 };
 
 gulp.task('server', function () {
@@ -26,6 +27,11 @@ gulp.task('styl', function () {
     .pipe(livereload());
 });
 
+gulp.task('jade', function () {
+  return gulp.src(paths.jade)
+        .pipe(livereload());
+});
+
 gulp.task('css', function () {
   return gulp.src(paths.css)
         .pipe(livereload());
@@ -35,6 +41,7 @@ gulp.task('watch', function() {
   livereload.listen();
   gulp.watch(paths.styl, ['styl']);
   gulp.watch(paths.css, ['css']);
+  gulp.watch(paths.jade, ['jade']);
   gulp.watch(['app.js'], [server.run]);
 
 });
